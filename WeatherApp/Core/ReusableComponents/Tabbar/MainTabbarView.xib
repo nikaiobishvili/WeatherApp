@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainTabbarView" customModule="WeatherApp" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="ags-6X-8Jc"/>
+                <outlet property="selectedViewLeftConstraint" destination="Vyu-IL-1U1" id="lBe-jI-pms"/>
+                <outlet property="stackView" destination="DCx-SX-81E" id="zCC-lp-HmX"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="DCx-SX-81E">
+                    <rect key="frame" x="115.5" y="0.0" width="144" height="60"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8M-7J-7CP" customClass="MainTabbarButton" customModule="WeatherApp" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="64" height="60"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <inset key="imageEdgeInsets" minX="12" minY="12" maxX="12" maxY="12"/>
+                            <state key="normal" image="ic_calendar"/>
+                        </button>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0m-aa-QSt" customClass="MainTabbarButton" customModule="WeatherApp" customModuleProvider="target">
+                            <rect key="frame" x="80" y="0.0" width="64" height="60"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <inset key="imageEdgeInsets" minX="12" minY="12" maxX="12" maxY="12"/>
+                            <state key="normal" image="ic_barometer"/>
+                        </button>
+                    </subviews>
+                </stackView>
+                <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yQk-IO-Bua">
+                    <rect key="frame" x="115.5" y="56" width="64" height="4"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="4" id="u1R-Mn-tvN"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.11372549019607843" green="0.12941176470588234" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="DCx-SX-81E" secondAttribute="bottom" id="DWr-41-Owd"/>
+                <constraint firstItem="DCx-SX-81E" firstAttribute="leading" secondItem="yQk-IO-Bua" secondAttribute="leading" id="Vyu-IL-1U1"/>
+                <constraint firstItem="h8M-7J-7CP" firstAttribute="width" secondItem="yQk-IO-Bua" secondAttribute="width" id="dF4-ls-KIk"/>
+                <constraint firstAttribute="bottom" secondItem="yQk-IO-Bua" secondAttribute="bottom" id="u3U-YE-Kqh"/>
+                <constraint firstItem="DCx-SX-81E" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="wza-wF-RMg"/>
+                <constraint firstItem="DCx-SX-81E" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="xMx-5I-r3e"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="139" y="99"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_barometer" width="64" height="64"/>
+        <image name="ic_calendar" width="64" height="64"/>
+    </resources>
+</document>
